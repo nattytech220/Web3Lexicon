@@ -1,0 +1,41 @@
+# LexiChain - Your Web3 Dictionary App
+
+def main():
+    print("Welcome to LexiChain - The Decentralized Dictionary!")
+    print("-" * 50)
+    print("Available Words in LexiChain:")
+    
+    # Predefined dictionary with Web3-inspired words and meanings
+    lexi_chain = {
+        "blockchain": "A decentralized and distributed ledger technology.",
+        "decentralized": "A system or organization that operates without a central authority.",
+        "cryptocurrency": "A digital currency that uses cryptography for security.",
+        "NFT": "Non-Fungible Token; a unique digital asset representing ownership.",
+        "DAO": "Decentralized Autonomous Organization; governed by smart contracts.",
+        "staking": "The act of locking up cryptocurrency to earn rewards or support the network.",
+        "metaverse": "A collective virtual shared space created by the convergence of physical and digital reality.",
+        "wallet": "A software or hardware tool used to store private and public keys for cryptocurrency transactions.",
+        "smart contract": "Self-executing contracts with the terms of the agreement directly written into code.",
+        "gas fee": "A fee required to perform transactions on a blockchain network."
+    }
+    
+    # Display all available words
+    for word in lexi_chain.keys():
+        print(f"- {word}")
+    print("-" * 50)
+    
+    # Interactive dictionary functionality
+    while True:
+        user_input = input("\nEnter a word to find its meaning (or type 'exit' to quit): ").strip().lower()
+        
+        if user_input == "exit":
+            print("Thank you for using LexiChain. Stay decentralized!")
+            break
+        elif user_input in lexi_chain:
+            print(f"{user_input.capitalize()}: {lexi_chain[user_input]}")
+        else:
+            print("Word not found in LexiChain. Try another one!")
+
+# Run the app
+if __name__ == "__main__":
+    main()
